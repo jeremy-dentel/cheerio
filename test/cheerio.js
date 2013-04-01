@@ -1,5 +1,5 @@
 var expect = require('expect.js'),
-    _ = require('underscore'),
+    _ = require('lodash/dist/lodash.underscore'),
     $ = require('../'),
     fruits = require('./fixtures').fruits;
 
