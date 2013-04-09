@@ -104,8 +104,8 @@ are valid in cheerio as well. The default options are:
 }
 ```
 
-For a list of options and their effects, see [this](https://github.com/FB55/node-htmlparser/wiki/DOMHandler) and
-[this](https://github.com/FB55/node-htmlparser/wiki/Parser-options).
+For a list of options and their effects, see [this](https://github.com/fb55/DomHandler) and
+[this](https://github.com/fb55/htmlparser2/wiki/Parser-options).
 
 ### Selectors
 
@@ -142,6 +142,16 @@ $('.apple').attr('id', 'favorite').html()
 ```
 
 > See http://api.jquery.com/attr/ for more information
+
+#### .val( [value] )
+Method for getting and setting the value of input, select, and textarea. Note: Support for `map`, and `function` has not been added yet.
+
+    $('input[type="text"]').val()
+    => input_text
+
+    $('input[type="text"]').val('test').html()
+    => <input type="text" value="test"/>
+
 
 #### .removeAttr( name )
 Method for removing attributes by `name`.
@@ -208,6 +218,15 @@ Gets the parent of the first selected element.
 ```js
 $('.pear').parent().attr('id')
 //=> fruits
+```
+
+#### .parents([selector])
+Get a set of parents filtered by `selector` of each element in the current set of match elements.
+```js
+$('.orange').parents().length
+// => 2
+$('.orange').parents('#fruits').length
+// => 1
 ```
 
 #### .next()
